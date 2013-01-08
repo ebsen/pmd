@@ -25,7 +25,10 @@ Yeah, there's nothing really here yet. You just dump the file somewhere in you P
 
 ## Future plans
 1. Include a pretty picture.
-2. Make `pmd` better.
+2. Make `pmd` better--like, for instance, pushing the timer to a background thread or process so that the interface doesn't remain locked up while the timer runs. (Yeah, I know.)
+
+## Known issues
+See #2 under "Future plans." :-)
 
 # License
 I'm issuing this into the Public Domain but licensing regarding timers and terminal-notifier may be different.
