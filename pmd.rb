@@ -6,7 +6,7 @@ require 'terminal-notifier'
 
 options = {}
 option_parser = OptionParser.new do |opts|
-  opts.banner = 'Usage: example.rb [options]'
+  opts.banner = 'Usage: ./pmd.rb [options] (With no arguments, pmd will start a 25-minute timer.)'
   
   # Switches (on/off)
   opts.on '-h', '--help', 'Display this help screen.' do
