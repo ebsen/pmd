@@ -3,7 +3,7 @@
 
 It carries three dependencies. The two linked come with handy gems.
 
-* OptionParser, from the standard library
+* OptionParser, from the Ruby standard library
 * [terminal-notifier](https://github.com/alloy/terminal-notifier)
 * [timers](https://github.com/tarcieri/timers)
 
@@ -24,7 +24,8 @@ The reason for a lot of `pmd`'s structure comes from the terminal-notifier utili
 Yeah, there's nothing really here yet. You just dump the file somewhere in you PATH or `cd` to the directory where it lives. 
 
 ## Future plans
-1. Make `pmd` better.
+1. Include a pretty picture.
+2. Make `pmd` better.
 
 # License
 I'm issuing this into the Public Domain but licensing regarding timers and terminal-notifier may be different.
