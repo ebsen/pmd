@@ -47,11 +47,26 @@ options[:title] = 'Terminal' unless options[:title]
 options[:message] = 'Your timer is ready.' unless options[:message]
 options[:duration] = pomodoro unless options[:duration]
 
-# Create timer
-timer = Timers.new
-timer.after( options[:duration] ) do
-  TerminalNotifier.notify( options[:message], :title => options[:title])
+# Test for a subprocess and create a timer there if we can.
+if Process.respond_to? :fork
+  Process.fork do
+    timer = Timers.new
+    timer.after( options[:duration] ) do
+      TerminalNotifier.notify( options[:message], :title => options[:title])
+    end
+    dur = options[:duration]
+    puts "Timer set for #{options[:duration]} seconds."
+    timer.wait
+  end
+else
+  puts "Couldn't fork the process."
 end
-dur = options[:duration]
-puts "Timer set for #{options[:duration]} seconds."
-timer.wait
+
+puts
+
+# timer.after( options[:duration] ) do
+#   TerminalNotifier.notify( options[:message], :title => options[:title])
+# end
+# dur = options[:duration]
+# puts "Timer set for #{options[:duration]} seconds."
+# timer.wait
