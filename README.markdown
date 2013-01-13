@@ -3,7 +3,7 @@
 
 It carries three dependencies. The two linked come with handy gems.
 
-* OptionParser, from the Ruby standard library
+* OptionParser, from the Ruby standard library. *Note*: This library requires Ruby version 1.9.x.
 * [terminal-notifier](https://github.com/alloy/terminal-notifier)
 * [timers](https://github.com/tarcieri/timers)
 
