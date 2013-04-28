@@ -25,7 +25,7 @@ Yeah, there's nothing really here yet. You just dump the file somewhere in you P
 
 ## Future plans
 1. Include a pretty picture.
-2. Make `pmd` better--like, for instance, pushing the timer to a background thread or process so that the interface doesn't remain locked up while the timer runs. (Yeah, I know.)
+2. Push the timer object to a background thread or process so that the interface returns user control properly after the time finishes.
 
 ## Known issues
 See #2 under "Future plans." :-)
